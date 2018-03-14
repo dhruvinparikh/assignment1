@@ -83,3 +83,17 @@ for name in arrayOfDictionaries {
     }
 }
 print(fullNames)
+
+//Exercise4
+//Do the following using Xcode playground:
+//You are given an array - let values = [3, 10, 6, 1, 4, 8, 2, 5, 9, 7]
+//Using Array methods filter, map, reduce and sorted, you need to multiply every odd value by 2 and then add them.
+
+let values = [3, 10, 6, 1, 4, 8, 2, 5, 9, 7]
+
+let sum = values.filter {$0 % 2 != 0 }.map{ $0 * 2}.sorted().reduce(0, +)
+print(sum)
+
+
+
+
