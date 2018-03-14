@@ -90,9 +90,11 @@ print(fullNames)
 //Using Array methods filter, map, reduce and sorted, you need to multiply every odd value by 2 and then add them.
 
 let values = [3, 10, 6, 1, 4, 8, 2, 5, 9, 7]
-
+print("Getting odd number",values.filter {$0 % 2 != 0 })
+print("Multiplying it by 2",values.filter {$0 % 2 != 0 }.map{ $0 * 2})
+print("Sorting in ascending", values.filter {$0 % 2 != 0 }.map{ $0 * 2}.sorted())
 let sum = values.filter {$0 % 2 != 0 }.map{ $0 * 2}.sorted().reduce(0, +)
-print(sum)
+print("Sum : ",sum)
 
 
 
