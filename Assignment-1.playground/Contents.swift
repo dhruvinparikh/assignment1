@@ -44,3 +44,42 @@ func SumAvgArray(values:[Int] ) -> (Int,Double){
 }
 var result = SumAvgArray(values:[17,18,19,20])
 print("Sum of 17, 18 ,19 and 20 is \(result.0) and average is \(result.1)")
+
+//Exercise3
+//Do the following using Xcode playground:
+//You are given an array of dictionaries. Each dictionary in the array contains 2 keys “firstName” and “lastName”. Create an array of strings called fullNames that contains the values for “firstName” and “lastName” from the dictionary separated by a space.
+
+var arrayOfDictionaries: [[String:String]] = [
+    [
+        "firstName": "Isaac",
+        "lastName": "Newton"
+    ],
+    [
+        "firstName": "Robert",
+        "lastName": "Bohr"
+    ],
+    [
+        "firstName": "Charles",
+        "lastName": "Darwin"
+    ],
+    [
+        "firstName": "Sonja",
+        "lastName": "Moreno"
+    ],
+    [
+        "firstName": "Noel",
+        "lastName": "Bowen"
+    ]
+]
+
+var fullNames: [String] = []
+
+for name in arrayOfDictionaries {
+    if let firstName = name["firstName"] {
+        if let lastName = name["lastName"] {
+            let fullName = "\(firstName) \(lastName)"
+            fullNames.append(fullName)
+        }
+    }
+}
+print(fullNames)
